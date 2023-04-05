@@ -1,0 +1,34 @@
+#include <iostream>
+
+ using namespace std;
+ 
+ class Person {
+     public:
+     int Height, Weight, Gender, Age;
+     string Name, Nationality;
+     
+     Person (int Height, int Weight, int Gender, int Age, string Name, string Nationality){
+        this->Height=Height;
+        this->Weight=Weight;
+        this->Gender=Gender;
+        this->Age=Age;
+        this->Name=Name;
+        this->Nationality=Nationality;
+     }
+     
+     void Aging (int God) {
+         this->Age += God;
+     }
+     void Transgendere (int Gay) {
+         this->Gender = Gay;
+     }
+     void Handshake (Person* Wimen1) {
+         cout <<this->Name<< " rob " <<Wimen1->Name<<endl;
+     }
+     
+ };
+ int main () {
+     Person* Man1 = new Person(180,70,1,35, "Arthur Morgan", "American");
+     Person* Wimen1 = new Person(140,30,0,14, "Mary Linton", "Asian");
+     Man1->Handshake(Wimen1);
+ }
